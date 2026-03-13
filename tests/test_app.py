@@ -23,7 +23,7 @@ def reset_activities():
 
 def test_root_redirects():
     # Arrange & Act
-    response = client.get("/")
+    response = client.get("/", allow_redirects=False)
 
     # Assert
     assert response.status_code == 307
